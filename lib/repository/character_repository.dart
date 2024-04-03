@@ -1,4 +1,4 @@
-import 'package:rick_and_morty_flutter/models/character_detail_model.dart';
+import '../models/character_detail_model.dart';
 
 import '../config/query.dart';
 import '../models/character_model.dart';

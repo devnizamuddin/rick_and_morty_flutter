@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rick_and_morty_flutter/features/cast/ui/cast_detail_screen.dart';
-import 'package:rick_and_morty_flutter/models/character_detail_model.dart';
+import '../ui/cast_detail_screen.dart';
+import '../../../models/character_detail_model.dart';
 
 import '../../../repository/character_repository.dart';
 part 'cast_event.dart';

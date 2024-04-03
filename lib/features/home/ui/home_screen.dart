@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rick_and_morty_flutter/models/character_model.dart';
-import 'package:rick_and_morty_flutter/widgets/images.dart';
+
 import '../../../config/app_assets.dart';
+import '../../../models/character_model.dart';
+import '../../../widgets/images.dart';
 import '../../../widgets/list_header_row.dart';
 import '../bloc/home_bloc.dart';
 

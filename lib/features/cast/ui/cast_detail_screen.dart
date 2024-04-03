@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_flutter/models/character_detail_model.dart';
-import 'package:rick_and_morty_flutter/widgets/images.dart';
 
 import '../../../config/app_assets.dart';
+import '../../../models/character_detail_model.dart';
+import '../../../widgets/images.dart';
 
 class CastDetailScreen extends StatelessWidget {
   static const route = '/castDetailScreen';

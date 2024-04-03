@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rick_and_morty_flutter/features/landing/bloc/landing_page_bloc.dart';
-import 'package:rick_and_morty_flutter/models/character_model.dart';
+import '../../landing/bloc/landing_page_bloc.dart';
+import '../../../models/character_model.dart';
 import '../../../repository/character_repository.dart';
 
 part 'home_event.dart';

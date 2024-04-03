@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rick_and_morty_flutter/config/app_theme.dart';
-import 'package:rick_and_morty_flutter/config/routes.dart';
-import 'package:rick_and_morty_flutter/features/landing/bloc/landing_page_bloc.dart';
+import 'config/app_theme.dart';
+import 'config/routes.dart';
+import 'features/landing/bloc/landing_page_bloc.dart';
 import 'features/splash/bloc/splash_bloc.dart';
 
 class RickAndMorty extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rick_and_morty_flutter/features/cast/bloc/cast_bloc.dart';
-import 'package:rick_and_morty_flutter/models/character_detail_model.dart';
+import '../bloc/cast_bloc.dart';
+import '../../../models/character_detail_model.dart';
 
 import '../../../config/app_assets.dart';
 import '../../../widgets/images.dart';
