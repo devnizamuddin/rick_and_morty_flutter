@@ -16,7 +16,10 @@ class RickAndMorty extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Rick And Morty',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: const ColorScheme.light(
+            primary: Color(0xff9DFE00),
+            secondary: Color(0xff13D9E5),
+          ),
           useMaterial3: true,
         ),
         home: const SplashScreen(),
