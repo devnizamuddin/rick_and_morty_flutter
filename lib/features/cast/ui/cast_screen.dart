@@ -7,6 +7,8 @@ import '../../../config/app_assets.dart';
 import '../../../widgets/images.dart';
 
 class CastScreen extends StatefulWidget {
+  static const route = '/castScreen';
+
   const CastScreen({super.key});
 
   @override

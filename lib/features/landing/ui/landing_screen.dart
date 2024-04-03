@@ -8,6 +8,8 @@ import '../../../widgets/main_nav_bar.dart';
 import '../bloc/landing_page_bloc.dart';
 
 class LandingScreen extends StatelessWidget {
+  static const route = '/landingScreen';
+
   const LandingScreen({super.key});
 
   @override

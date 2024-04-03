@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CastDetailScreen extends StatelessWidget {
+  static const route = '/castDetailScreen';
+
   const CastDetailScreen({
     super.key,
   });
-  static const route = 'castDetailScreen';
 
   @override
   Widget build(BuildContext context) {

@@ -6,6 +6,8 @@ import '../../landing/ui/landing_screen.dart';
 import '../bloc/splash_bloc.dart';
 
 class SplashScreen extends StatelessWidget {
+  static const route = '/';
+
   const SplashScreen({super.key});
 
   @override
@@ -21,12 +23,7 @@ class SplashScreen extends StatelessWidget {
         bloc: splashBloc,
         listener: (context, state) {
           if (state is SplashLoaded) {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) => const LandingScreen(),
-              ),
-            );
+            Navigator.popAndPushNamed(context, LandingScreen.route);
           }
         },
         child: const SafeArea(
