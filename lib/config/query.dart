@@ -1,7 +1,7 @@
 String getAllCharacterQuery() {
   const String allCharacterQuery = '''
-    query {
-      characters {
+     query {
+      characters(page:1) {
         results {
           id
           name
@@ -12,10 +12,11 @@ String getAllCharacterQuery() {
   ''';
   return allCharacterQuery;
 }
-String getAllCharacterDetailsQuery() {
-  const String allCharacterQuery = '''
+
+String getAllCharacterDetailsQuery({required int page}) {
+  String allCharacterQuery = '''
     query {
-      characters {
+      characters(page:$page) {
         results {
           name
           status

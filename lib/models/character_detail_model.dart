@@ -1,7 +1,3 @@
-
-
-
-
 class CharacterDetailModel {
   String? name;
   String? status;
@@ -10,7 +6,7 @@ class CharacterDetailModel {
   String? image;
   OriginModel? originModel;
   LocationModel? locationModel;
-  List<EpisodeModel>? episodeModel;
+  List<EpisodeModel>? episodeModelList;
   CharacterDetailModel({
     this.name,
     this.status,
@@ -19,7 +15,7 @@ class CharacterDetailModel {
     this.image,
     this.originModel,
     this.locationModel,
-    this.episodeModel,
+    this.episodeModelList,
   });
 
   factory CharacterDetailModel.fromMap(Map<String, dynamic> map) {
@@ -29,18 +25,16 @@ class CharacterDetailModel {
       species: map['species'] != null ? map['species'] as String : null,
       gender: map['gender'] != null ? map['gender'] as String : null,
       image: map['image'] != null ? map['image'] as String : null,
-      originModel: map['originModel'] != null
-          ? OriginModel.fromMap(map['originModel'] as Map<String, dynamic>)
+      originModel: map['origin'] != null
+          ? OriginModel.fromMap(map['origin'] as Map<String, dynamic>)
           : null,
-      locationModel: map['locationModel'] != null
-          ? LocationModel.fromMap(map['locationModel'] as Map<String, dynamic>)
+      locationModel: map['location'] != null
+          ? LocationModel.fromMap(map['location'] as Map<String, dynamic>)
           : null,
-      episodeModel: map['episodeModel'] != null
-          ? List<EpisodeModel>.from(
-              (map['episodeModel'] as List<int>).map<EpisodeModel?>(
-                (x) => EpisodeModel.fromMap(x as Map<String, dynamic>),
-              ),
-            )
+      episodeModelList: map['episode'] != null
+          ? (map['episode'] as List)
+              .map((e) => EpisodeModel.fromMap(e))
+              .toList()
           : null,
     );
   }
