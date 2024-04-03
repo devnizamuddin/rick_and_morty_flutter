@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../config/app_assets.dart';
-import '../splash/splash_bloc.dart';
+import '../../landing/ui/landing_screen.dart';
+import '../bloc/splash_bloc.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -20,8 +21,12 @@ class SplashScreen extends StatelessWidget {
         bloc: splashBloc,
         listener: (context, state) {
           if (state is SplashLoaded) {
-            debugPrint(
-                '===================================================Moving to Landing Screen================================================');
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (BuildContext context) => const LandingScreen(),
+              ),
+            );
           }
         },
         child: const SafeArea(
