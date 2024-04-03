@@ -28,6 +28,7 @@ class _CastScreenState extends State<CastScreen> {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
+      backgroundColor: colorScheme.onSurface,
       appBar: AppBar(
         toolbarHeight: 80,
         centerTitle: true,
