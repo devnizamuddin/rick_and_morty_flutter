@@ -6,14 +6,25 @@ import '../../../config/app_assets.dart';
 import '../../../widgets/list_header_row.dart';
 import '../bloc/home_bloc.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final HomeBloc homeBloc = HomeBloc();
+  @override
+  void initState() {
+    homeBloc.add(HomeCharacterInitialFetchEvent());
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final HomeBloc homeBloc = HomeBloc();
-    homeBloc.add(HomeCharacterInitialFetchEvent());
+
     return Scaffold(
       backgroundColor: colorScheme.onSurface,
       appBar: AppBar(
@@ -37,7 +48,9 @@ class HomeScreen extends StatelessWidget {
             //=============================================== Meet the cast ===============================================//
             ListHeaderRow(
               text: 'Meet the cast',
-              onPressedViewAll: () {},
+              onPressedViewAll: () {
+                homeBloc.add(HomeViewAllCharacterActionEvent(context: context));
+              },
             ),
             SizedBox(
               height: 160,

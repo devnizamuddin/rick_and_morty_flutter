@@ -12,4 +12,7 @@ final class HomeCharacterFetchingSuccess extends HomeState {
   HomeCharacterFetchingSuccess(this.characterModelList);
 }
 
-final class HomeCharacterFetchingError extends HomeState {}
+final class HomeCharacterFetchingError extends HomeState {
+  final String errorMessage;
+  HomeCharacterFetchingError(this.errorMessage);
+}

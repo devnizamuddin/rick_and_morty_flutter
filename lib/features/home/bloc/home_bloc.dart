@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rick_and_morty_flutter/features/landing/bloc/landing_page_bloc.dart';
 import 'package:rick_and_morty_flutter/models/character_model.dart';
 import '../../../repository/character_repository.dart';
 
@@ -10,6 +11,7 @@ part 'home_state.dart';
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(HomeInitial()) {
     on<HomeCharacterInitialFetchEvent>(homeCastInitialFetchEvent);
+    on<HomeViewAllCharacterActionEvent>(homeViewAllCharacterActionEvent);
   }
 
   Future homeCastInitialFetchEvent(event, emit) async {
@@ -20,7 +22,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     if (characterModelList != null) {
       emit(HomeCharacterFetchingSuccess(characterModelList));
     } else {
-      emit(HomeCharacterFetchingError());
+      emit(HomeCharacterFetchingError('Character can not be loaded'));
     }
+  }
+
+  FutureOr<void> homeViewAllCharacterActionEvent(event, emit) {
+    BlocProvider.of<LandingPageBloc>(event.context).add(TabChange(tabIndex: 1));
   }
 }
