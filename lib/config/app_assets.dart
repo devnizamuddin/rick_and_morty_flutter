@@ -5,4 +5,5 @@ class AppAssets {
       'assets/images/rick_and_morty_circle.png';
   static const RICK_AND_MORTY_TEXT = 'assets/images/rick_and_morty_text.png';
   static const SPLASH_FRAME = 'assets/images/splash_frame.png';
+  static const String DEFAULT_IMAGE = 'assets/image/default_image.png';
 }
