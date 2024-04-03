@@ -6,7 +6,6 @@ import 'package:rick_and_morty_flutter/features/cast/ui/cast_detail_screen.dart'
 import 'package:rick_and_morty_flutter/models/character_detail_model.dart';
 
 import '../../../repository/character_repository.dart';
-
 part 'cast_event.dart';
 part 'cast_state.dart';
 
@@ -30,6 +29,7 @@ class CastBloc extends Bloc<CastEvent, CastState> {
   }
 
   FutureOr<void> castCharacterDetailPageNavigateEvent(event, emit) {
-    Navigator.pushNamed(event.context, CastDetailScreen.route);
+    Navigator.pushNamed(event.context, CastDetailScreen.route,
+        arguments: event.characterDetailModel);
   }
 }

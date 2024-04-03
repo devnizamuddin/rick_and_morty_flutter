@@ -39,6 +39,7 @@ class _CastScreenState extends State<CastScreen> {
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               'All Cast',
